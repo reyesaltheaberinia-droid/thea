@@ -1,0 +1,267 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #846545;
+  color: #693e36;
+  scroll-behavior: smooth;
+}
+
+/* ====== HEADER ====== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3e2723;
+  color: white;
+  padding: 15px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  animation: slideDown 1s ease;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffcc80;
+  transform: scale(1.1);
+}
+
+.navbar a.active {
+  color: #ffcc80;
+  border-bottom: 2px solid #ffcc80;
+}
+
+/* ====== HOME ====== */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background: url("Background\ Image.jpg") no-repeat center/cover;
+  color: rgb(51, 27, 27);
+  text-align: center;
+  animation: fadeIn 2s ease;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: #9a7366;
+  color: rgb(37, 27, 27);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.4s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #8d6e63;
+  transform: scale(1.1);
+}
+
+/* ====== ABOUT ====== */
+.about {
+  padding: 60px 30px;
+  text-align: center;
+  background-color: #fbe9e7;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.about-image img {
+  width: 300px;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== ORDER ====== */
+.order {
+  background-color: #fff3e0;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.order h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ====== CONTACT ====== */
+.contact {
+  background-color: #efebe9;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #8d6e63;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  background-color: #3e2723;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.feedback {
+  background-color: #f9f9f9;
+  padding: 40px;
+  text-align: center;
+  border-top: 2px solid #c49b63;
+}
+
+.feedback h2 {
+  color: #6b4f34;
+}
+
+.feedback-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.feedback-form .btn {
+  background-color: #6b4f34;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form .btn:hover {
+  background-color: #8b5e3c;
+}
